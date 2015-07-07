@@ -8,7 +8,9 @@
 <body>
 
     <div class="page-header">
-        <h1><a href=""><img src="{% static 'images/Bernie_logo_white_RGB.png' %}" width="300" alt="Bernie2016 Logo"></a></h1>
+        <h1><a href="{% url 'news.views.post_list' %}"><img src="{% static 'images/Bernie_logo_white_RGB.png' %}" width="300" alt="Bernie2016 Logo"></a></h1>
+        </br>
+        <center><a href="{% url 'news.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></center>
     </div>
     <div class="content container">
         <div class="row">
