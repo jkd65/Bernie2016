@@ -1,19 +1,12 @@
-<html>
-    <head>
-        <title>Bernie Sanders</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Bernie Sanders</a></h1>
-        </div>
+{% extends "news/base.html" %}
 
-        {% for post in posts %}
-        	<div>
-        		<h1><a href="">{{ post.title }}</a></h1>
-        		<p>Published: {{ post.published_date }}</p>
-        		<p>{{ post.text|truncatechars:200 }}</p>
-        	</div>
-    	{% endfor %}
-
-    </body>
-</html>
+{% block content %}
+    {% for post in posts %}
+    	<div class="post">
+    		<h1><a href="{% url 'news.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    		<p>Published: {{ post.published_date }}</p>
+    		<p>{{ post.text|truncatechars:200 }}</p>
+    	</div>
+	{% endfor %}
+{% endblock content %}
+		    	
