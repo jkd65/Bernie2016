@@ -1,0 +1,21 @@
+{% extends "policies/base.html" %}
+
+{% block content %}
+	
+	<div class="content">
+		{% if title.published_date %}
+			<div class="date">
+				{{ title.published_date }}
+			</div>
+		{% else %}
+			<a href="" class="btn btn-default">Publish</a>
+		{% endif %}
+		<a class="btn btn-default" href="{% url 'content_edit' pk=title.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a>
+
+
+		<h1>{{ title.name }}</h1>
+		<p>{{ title.text|linebreaks }}</p>
+	</div>
+	
+{% endblock %}

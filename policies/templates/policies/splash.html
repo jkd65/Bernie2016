@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+	<title>Bernie Sanders</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/splash.css" %}">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+		<a href="{% url 'policies.views.splash' %}">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<img src="{% static 'images/berniesplash.png' %}" width="300">
+				</div>
+			</div>
+		</a>
+
+		<div class="container">
+			<div class="content">
+				<div class="text-center">
+				<a href="{% url 'policies.views.table_of_contents' %}"><button type="button" class="btn btn-primary btn-xlarge">ISSUES</button></a>
+				</br>
+				<a href="{% url 'news.views.post_list' %}"><button type="button" class="btn btn-primary btn-xlarge">  NEWS  </button></a>
+				</div>
+			</div>
+		</div>
+
+		{% if user.is_authenticated %}
+			<p class="top-menu" style="color:white">Hello, {{ user.username }} - <small><a style="color:white" href="{% url 'django.contrib.auth.views.logout' %}">Logout</a></small></p>
+		{% else %}
+			<center><a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock" style="color:white"></span></a></center>
+		{% endif %}
+
+</body>
+</html>
