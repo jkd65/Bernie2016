@@ -9,20 +9,7 @@
 <body>
 
     <div class="page-header">
-    {% if user.is_authenticated %}
-        <h1><a href="{% url 'policies.views.splash' %}"><img src="{% static 'images/Bernie_logo_white_RGB.png' %}" width="300" alt="Bernie2016 Logo"></a></h1>
-        </br>
-        <center><a href="{% url 'news.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus" style="color:white"></span></a></center>
-        </br>
-        <center><a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit" style="color:white"></span></a></center>
-        </br>
-        <center><p class="top-menu" style="color:white">Hello {{ user.username }} - <small>(<a style="color:white" href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p></center>
-    {% else %}
-        <h1><a href="{% url 'news.views.post_list' %}"><img src="{% static 'images/Bernie_logo_white_RGB.png' %}" width="300" alt="Bernie2016 Logo"></a></h1>
-        </br>
-        <center><a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock" style="color:white"></span></a></center>
-    {% endif %}
-    </div>
+    <h1><a href="{% url 'policies.views.splash' %}"><img src="{% static 'images/berniesplash.png' %}" width="450" alt="Bernie2016 Logo"></a></h1>
     <div class="content container">
         <div class="row">
             <div class="col-md-8">

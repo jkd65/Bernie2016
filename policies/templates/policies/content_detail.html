@@ -8,14 +8,31 @@
 				{{ title.published_date }}
 			</div>
 		{% else %}
-			<a href="" class="btn btn-default">Publish</a>
+			<div class="date">
+				<a href="" class="btn btn-default">Publish</a>
+			</div>
 		{% endif %}
-		<a class="btn btn-default" href="{% url 'content_edit' pk=title.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-        <a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a>
-
-
-		<h1>{{ title.name }}</h1>
-		<p>{{ title.text|linebreaks }}</p>
+		<div class="date">
+			<a class="btn btn-default" href="{% url 'policies.views.table_of_contents' %}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		</div>
+		{% if user.is_authenticated %}
+		<div class="date">
+			<a class="btn btn-default" href="{% url 'content_edit' pk=title.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        	<a class="btn btn-default" href=""><span class="glyphicon glyphicon-remove"></span></a>
+    	</div>
+        {% endif %}
+        <div class="panel panel-default">
+		<div class="panel-body">
+			<center><h1>{{ title.name }}</h1></center>
+		</div>
+		</div>
+		<div class="container">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p class="details">{{ title.text|safe|linebreaks }}</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 {% endblock %}

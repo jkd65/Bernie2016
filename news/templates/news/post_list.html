@@ -1,6 +1,19 @@
 {% extends "news/base.html" %}
 
 {% block content %}
+    {% if user.is_authenticated %}
+    </div>
+        </br>
+        <center>
+        <a href="{% url 'news.views.post_new' %}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{% url 'post_draft_list' %}" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+        </center>
+        </br>
+        <center><p class="top-menu">Hello {{ user.username }} - <small><a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a></small></p></center>
+    {% else %}
+        </div>
+        <a href="{% url 'django.contrib.auth.views.login' %}"><span class="glyphicon glyphicon-lock"></span></a>
+    {% endif %}
     {% for post in posts %}
     	<div class="post">
     		<h1><a href="{% url 'news.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>

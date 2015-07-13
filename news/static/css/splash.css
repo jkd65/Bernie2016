@@ -21,12 +21,12 @@ img{
 }
 
 .btn-xlarge {
-    padding: 18px 28px;
+    padding: 20px 30px;
     font-size: 22px;
     line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
 }
 
 .content {
@@ -45,4 +45,12 @@ img{
 
 .top-menu {
 	text-align: center;
+}
+
+#issuebtn {
+	padding-right: 10px; 
+}
+
+#newsbtn {
+	padding-left: 10px;
 }

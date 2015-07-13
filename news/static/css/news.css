@@ -19,3 +19,17 @@ img{
 #toc {
 	font-size: 20px;
 }
+
+.container {
+	background-color: #dceaf4;
+	border-radius: 5px;
+}
+
+.date {
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+#details {
+	padding-top: 10px;
+}
