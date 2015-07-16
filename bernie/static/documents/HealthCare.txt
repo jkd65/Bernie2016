@@ -1,0 +1,24 @@
+<font size="3" face="Lato">
+
+<p>
+<center><h2><em>The state of Healthcare in the United States of America</em></h2></center>
+</p>
+<p>
+<center><iframe width="640" height="360" src="https://www.youtube.com/embed/yN-MkRcOJjY" frameborder="0" allowfullscreen></iframe></center>
+</p>
+</br>
+<p>
+<center><h2><em>Where does Bernie Sanders stand on Healthcare?</em></h2></center>
+</p>
+<p>
+Bernie Sanders believes that the 2-tier system currently used in America is not the right direction for our healthcare system and instead thinks that healthcare, like education, is a right of all the people and he firmly believes in a single payer medicare for all system.
+</br>
+<center><iframe width="640" height="360" src="https://www.youtube.com/embed/1dkV47lPLAo" frameborder="0" allowfullscreen></iframe></center>
+</p>
+
+<p>
+<center><h2><em>What about all of the criticisms of a single payer healthcare service (like wait times)?</em></h2></center>
+</p>
+<p>
+<center><iframe width="640" height="360" src="https://www.youtube.com/embed/iYOf6hXGx6M" frameborder="0" allowfullscreen></iframe></center>
+</p> 

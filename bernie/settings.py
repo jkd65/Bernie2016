@@ -78,8 +78,10 @@ WSGI_APPLICATION = 'bernie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bernie2016',
+        'USER': 'bernie2016user',
+        'PASSWORD': 'johnda123',
     }
 }
 
